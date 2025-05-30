@@ -7,6 +7,7 @@ public class RentalPropertyToDtoMapper {
 
     public static RentalPropertyDto toDto(RentalProperty entity) {
         RentalPropertyDto dto = new RentalPropertyDto();
+        dto.setId(entity.getId());
         dto.setAddress(entity.getAddress());
         dto.setArea(entity.getArea());
         dto.setDescription(entity.getDescription());
@@ -24,26 +25,5 @@ public class RentalPropertyToDtoMapper {
         dto.setHasBalcony(entity.getHasBalcony());
         dto.setHasParkingSpace(entity.getHasParkingSpace());
         return dto;
-    }
-
-    public static RentalProperty toEntity(RentalPropertyDto dto) {
-        RentalProperty entity = new RentalProperty();
-        entity.setAddress(dto.getAddress());
-        entity.setArea(dto.getArea());
-        entity.setDescription(dto.getDescription());
-        entity.setPropertyType(dto.getPropertyType());
-        entity.setRentAmount(dto.getRentAmount());
-        entity.setSecurityDepositAmount(dto.getSecurityDepositAmount());
-        entity.setTown(dto.getTown());
-        entity.setNumberOfBedrooms(dto.getNumberOfBedrooms());
-        entity.setFloorNumber(dto.getFloorNumber());
-        entity.setNumberOfFloors(dto.getNumberOfFloors());
-        entity.setConstructionYear(dto.getConstructionYear());
-        entity.setEnergyClassification(dto.getEnergyClassification());
-        entity.setHasElevator(dto.getHasElevator());
-        entity.setHasIntercom(dto.getHasIntercom());
-        entity.setHasBalcony(dto.getHasBalcony());
-        entity.setHasParkingSpace(dto.getHasParkingSpace());
-        return entity;
     }
 }

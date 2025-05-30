@@ -33,8 +33,18 @@ public class DataInitializer {
                 property2.setSecurityDepositAmount(1400.9);
                 property2.setTown("Champs-sur-Marne");
 
+                RentalProperty property3 = new RentalProperty();
+                property3.setAddress("12 rue de la pierre");
+                property3.setArea(62.5);
+                property3.setDescription("Maison à louer dans banlieue calme et proche du RER");
+                property3.setPropertyType(PropertyType.HOUSE);
+                property3.setRentAmount(1050.9);
+                property3.setSecurityDepositAmount(1400.9);
+                property3.setTown("Vincennes");
+
                 repository.save(property1);
                 repository.save(property2);
+                repository.save(property3);
 
                 System.out.println("🏠 Données de test insérées.");
             } else {

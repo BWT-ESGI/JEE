@@ -1,4 +1,4 @@
-package jee.spring.esgi.monitor.health;
+package jee.spring.esgi.health;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.actuate.health.Health;

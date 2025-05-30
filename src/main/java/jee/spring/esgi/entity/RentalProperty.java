@@ -2,7 +2,7 @@ package jee.spring.esgi.entity;
 
 import jakarta.persistence.*;
 import jee.spring.esgi.model.PropertyType;
-
+import jakarta.validation.constraints.*;
 
 @Entity
 @Table(name = "rental_property")
@@ -12,20 +12,117 @@ public class RentalProperty {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank
     private String address;
 
+    @NotNull
     private Double area;
 
+    @NotBlank
     private String description;
 
+    @NotNull
     @Enumerated(EnumType.STRING)
     private PropertyType propertyType;
 
+    @NotNull
     private Double rentAmount;
 
+    @NotNull
     private Double securityDepositAmount;
 
+    @NotNull
     private String town;
+
+    private Integer numberOfBedrooms;
+
+    private Integer floorNumber;
+
+    private Integer numberOfFloors;
+
+    private Integer constructionYear;
+
+    private String energyClassification;
+
+    private Boolean hasElevator;
+
+    private Boolean hasIntercom;
+
+    private Boolean hasBalcony;
+
+    private Boolean hasParkingSpace;
+
+    public Integer getNumberOfBedrooms() {
+        return numberOfBedrooms;
+    }
+
+    public void setNumberOfBedrooms(Integer numberOfBedrooms) {
+        this.numberOfBedrooms = numberOfBedrooms;
+    }
+
+    public Integer getFloorNumber() {
+        return floorNumber;
+    }
+
+    public void setFloorNumber(Integer floorNumber) {
+        this.floorNumber = floorNumber;
+    }
+
+    public Integer getNumberOfFloors() {
+        return numberOfFloors;
+    }
+
+    public void setNumberOfFloors(Integer numberOfFloors) {
+        this.numberOfFloors = numberOfFloors;
+    }
+
+    public Integer getConstructionYear() {
+        return constructionYear;
+    }
+
+    public void setConstructionYear(Integer constructionYear) {
+        this.constructionYear = constructionYear;
+    }
+
+    public String getEnergyClassification() {
+        return energyClassification;
+    }
+
+    public void setEnergyClassification(String energyClassification) {
+        this.energyClassification = energyClassification;
+    }
+
+    public Boolean getHasElevator() {
+        return hasElevator;
+    }
+
+    public void setHasElevator(Boolean hasElevator) {
+        this.hasElevator = hasElevator;
+    }
+
+    public Boolean getHasIntercom() {
+        return hasIntercom;
+    }
+
+    public void setHasIntercom(Boolean hasIntercom) {
+        this.hasIntercom = hasIntercom;
+    }
+
+    public Boolean getHasBalcony() {
+        return hasBalcony;
+    }
+
+    public void setHasBalcony(Boolean hasBalcony) {
+        this.hasBalcony = hasBalcony;
+    }
+
+    public Boolean getHasParkingSpace() {
+        return hasParkingSpace;
+    }
+
+    public void setHasParkingSpace(Boolean hasParkingSpace) {
+        this.hasParkingSpace = hasParkingSpace;
+    }
 
     public Long getId() {
         return id;
